@@ -1,0 +1,27 @@
+.list{
+  list-style-type: none;
+  border: none;
+  padding: 0;
+}
+
+.btn{
+  padding: 5px 15px;
+  background: #BCA88E;
+  color: var(--mainWhite);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-icon{
+  margin-left: 0.7rem;
+}
+.btn:hover{
+  background-color: #cfc0ab;
+  transform: scale(1.02);
+}
