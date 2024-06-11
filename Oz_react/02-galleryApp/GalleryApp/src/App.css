@@ -1,0 +1,25 @@
+html, body {
+  height:100%;
+  padding:0;
+  margin:0;
+
+  font-size: 15px;
+
+  ::-webkit-scrollbar{display: none;}
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+h1{
+  font-size: 50px;
+  margin-top: 100px;
+}
+
