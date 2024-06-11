@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>You Are Awesome!</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div id="header">
+        <i class="fas fa-stream"></i>
+        <p class="title">library</p>
+        <i class="fas fa-shopping-basket"></i>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-text" placeholder="Search Books...">
+        <i class="fas fa-search"></i>
+      </div>
+    </header>
+    <main>
+      <div class="section01">
+        <h3 id="main-book__title">Book of the day</h3>
+        <div class="main-book">
+          <div class="main-book-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791161571768.jpg">
+          </div>
+          <div class="main-book__info">
+            <p class="book-name">나의 돈키호테</p>
+            <p class="book-art">김호연</p>
+            <p class="book-grade">💛💛💛💛🤍</p>
+            <div class="tag-box">
+              <span class="tag">Journey</span>
+              <span class="tag">Biography</span>
+            </div>
+            <div class="main-btn">
+              <button class="mark-btn"><i class="fas fa-bookmark"></i></button>
+              <button class="read-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section02">
+        <h3>Top Adventures</h3>
+      </div>
+      <div class="sub-book">
+        <div class="books">
+          <div class="book-img-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/200x0/pdt/9791141600143.jpg">
+          </div>
+          <div class="book-grade">💛💛💛💛🤍</div>
+        </div>
+        <div class="books">
+          <div class="book-img-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788936457259.jpg">
+          </div>
+          <div class="book-grade">💛💛💛💛💛</div>
+        </div>
+        <div class="books">
+          <div class="book-img-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788936434434.jpg">
+          </div>
+          <div class="book-grade">💛💛💛💛💛</div>
+        </div>
+        <div class="books">
+          <div class="book-img-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788954694575.jpg">
+          </div>
+          <div class="book-grade">💛💛💛💛🤍</div>
+        </div>
+        <div class="books">
+          <div class="book-img-box">
+            <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9788937437564.jpg">
+          </div>
+          <div class="book-grade">💛💛💛💛💛</div>
+        </div>
+      </div>
+
+      <div class="section03">
+        <h3>Popular authors</h3>
+        <div class="authors">
+          <div class="alt-img">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QEYRXhpZgAASUkqAAgAAAADAA4BAgDIAAAAMgAAAJiCAgAWAAAA+gAAABIBAwABAAAAAQAAAAAAAABUT0tZTywgSkFQQU4gLSBKQU5VQVJZIDE3OiAgICBUaGUgMTM0dGggTmFva2kgQXdhcmQgd2lubmVyIEtlaWdvIEhpZ2FzaGlubyBhdHRlbmRzIGEgcHJlc3MgY29uZmVyZW5jZSBhdCBUb2t5byBLYWlrYW4gb24gSmFudWFyeSAxNywgMjAwNiBpbiBUb2t5bywgSmFwYW4uIChQaG90byBieSBUaGUgQXNhaGkgU2hpbWJ1biB2aWEgR2V0dHkgSW1hZ2VzKTIwMTUgVGhlIEFzYWhpIFNoaW1idW7/7QFAUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAASMcAlAAEVRoZSBBc2FoaSBTaGltYnVuHAJ4AMhUT0tZTywgSkFQQU4gLSBKQU5VQVJZIDE3OiAgICBUaGUgMTM0dGggTmFva2kgQXdhcmQgd2lubmVyIEtlaWdvIEhpZ2FzaGlubyBhdHRlbmRzIGEgcHJlc3MgY29uZmVyZW5jZSBhdCBUb2t5byBLYWlrYW4gb24gSmFudWFyeSAxNywgMjAwNiBpbiBUb2t5bywgSmFwYW4uIChQaG90byBieSBUaGUgQXNhaGkgU2hpbWJ1biB2aWEgR2V0dHkgSW1hZ2VzKRwCdAAWMjAxNSBUaGUgQXNhaGkgU2hpbWJ1bhwCbgAgVGhlIEFzYWhpIFNoaW1idW4gdmlhIEdldHR5IEltYWcA/+EF/2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+Cgk8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgoJCTxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6SXB0YzR4bXBDb3JlPSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wQ29yZS8xLjAveG1sbnMvIiAgIHhtbG5zOkdldHR5SW1hZ2VzR0lGVD0iaHR0cDovL3htcC5nZXR0eWltYWdlcy5jb20vZ2lmdC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBsdXM9Imh0dHA6Ly9ucy51c2VwbHVzLm9yZy9sZGYveG1wLzEuMC8iICB4bWxuczppcHRjRXh0PSJodHRwOi8vaXB0Yy5vcmcvc3RkL0lwdGM0eG1wRXh0LzIwMDgtMDItMjkvIiB4bWxuczp4bXBSaWdodHM9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9yaWdodHMvIiBkYzpSaWdodHM9IjIwMTUgVGhlIEFzYWhpIFNoaW1idW4iIHBob3Rvc2hvcDpDcmVkaXQ9IlRoZSBBc2FoaSBTaGltYnVuIHZpYSBHZXR0eSBJbWFnZXMiIEdldHR5SW1hZ2VzR0lGVDpBc3NldElEPSI1MDA1MjIxOTIiIHhtcFJpZ2h0czpXZWJTdGF0ZW1lbnQ9Imh0dHBzOi8vd3d3LmdldHR5aW1hZ2VzLmNvbS9ldWxhP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsIiA+CjxkYzpjcmVhdG9yPjxyZGY6U2VxPjxyZGY6bGk+VGhlIEFzYWhpIFNoaW1idW48L3JkZjpsaT48L3JkZjpTZXE+PC9kYzpjcmVhdG9yPjxkYzpkZXNjcmlwdGlvbj48cmRmOkFsdD48cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlRPS1lPLCBKQVBBTiAtIEpBTlVBUlkgMTc6ICAgIFRoZSAxMzR0aCBOYW9raSBBd2FyZCB3aW5uZXIgS2VpZ28gSGlnYXNoaW5vIGF0dGVuZHMgYSBwcmVzcyBjb25mZXJlbmNlIGF0IFRva3lvIEthaWthbiBvbiBKYW51YXJ5IDE3LCAyMDA2IGluIFRva3lvLCBKYXBhbi4gKFBob3RvIGJ5IFRoZSBBc2FoaSBTaGltYnVu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">
+          </div>
+          <div class="alt-sub">
+            <p>ひがしの けいご</p>
+            <p>일본은 물론 한국에서도 매우 유명한 대중적인 작가이며 한국에서도 베스트셀러가 된 나미야 잡화점의 기적, 용의자 X의 헌신 등의 작품을 쓴 작가로 유명하다.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</body>
+
+</html>

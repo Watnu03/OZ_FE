@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 문제 2: 성적 등급 매기기
+// 문제 설명: 사용자로부터 성적을 입력받아, 해당 성적의 등급(A, B, C, D, F)을 출력하는 프로그램을 작성하세요.
+// 조건:
+// 90점 이상이면 A
+// 80점 이상 90점 미만이면 B
+// 70점 이상 80점 미만이면 C
+// 60점 이상 70점 미만이면 D
+// 60점 미만이면 F
+
+        let grade = prompt('당신의 성적을 입력해주세요');
+
+        if(grade >= 90){
+            alert('당신의 성적은 '+grade+'점 이므로 등급은 A 입니다.');
+        }
+        else if(grade < 90 && grade >= 80 ){
+            alert('당신의 성적은 '+grade+'점 이므로 등급은 B 입니다.');
+        }
+        else if(grade < 80 && grade >= 70){
+            alert('당신의 성적은 '+grade+'점 이므로 등급은 C 입니다.');
+        }
+        else if(grade < 70 && grade >= 60){
+            alert('당신의 성적은 '+grade+'점 이므로 등급은 D 입니다.');
+        }
+        else if(grade < 60){
+            alert('당신의 성적은 '+grade+'점 이므로 등급은 F 입니다.');
+        }
+        else{
+            alert('잘 못 입력하셨습니다.');
+        }
+    </script>
+</body>
+</html>

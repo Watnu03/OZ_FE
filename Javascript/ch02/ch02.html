@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .content{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <title>Ch02</title>
+</head>
+<body>
+  <div class="content">
+    <h1 id="name"></h1>
+    <p id="age"></p>
+    <p id="hobby"></p>
+    <p id="song"></p>
+  </div>
+
+  <script>
+    const nameElement = document.querySelector('#name');
+    let name = prompt("당신의 이름은?");
+    nameElement.textContent = name;
+
+    const ageElement = document.querySelector('#age');
+    let age = prompt("당신의 나이는?");
+    ageElement.textContent = `나이는 ${age} 입니다`
+
+    const hobbyElement = document.querySelector('#hobby');
+    let hobby = prompt("당신의 취미는?");
+    hobbyElement.textContent = `취미는 ${hobby} 하는것 입니다!`
+
+    document.querySelector('#song').textContent = `좋아하는 곡은 ${prompt('좋아하는 곡은?')}입니다!!`
+  </script>
+</body>
+</html>

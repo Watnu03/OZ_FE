@@ -1,0 +1,102 @@
+header{
+
+}
+.nav-bar{
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  
+  font-size: 18px;
+  font-weight: 900;
+  color: #505050;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+}
+
+.nav__logo{
+  width: 100px;
+  height: 80px;
+
+  position: relative;
+
+  cursor: pointer;
+}
+.nav__logo img{
+  width: 100%;
+
+  left: 50%;
+  top: 50%;
+  position: absolute;
+
+  transform: translate(-50%,-50%);
+}
+
+.nav__menu{
+  list-style-type: none;
+
+  width: 600px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+}
+.nav__menu li{
+  width: 80px;
+  height: 80px;
+
+  text-align: center;
+  line-height: 80px;
+/* 버튼처럼 활성화 */
+  cursor: pointer;
+}
+.nav__menu > li:nth-child(1){
+  margin-right: 10px;
+}
+.nav__menu > li:nth-child(3){
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.nav__menu > li:nth-child(4){
+  width: 130px;
+  margin-left: -10px;
+}
+.nav__menu > li:nth-child(5){
+  width: 130px;
+}
+.nav__menu > li:hover{
+  color: #F6862E;
+}
+
+.nav__search{
+  display: flex;
+}
+.nav__search .search-bar{
+  width: 300px;
+  height: 45px;
+  padding-left: 10px;
+  background-color: #F2F3F6;
+  border: none;
+  border-radius: 10px;
+}
+.nav__search .search-bar:focus{
+  outline: 1px solid #F6862E;;
+}
+.nav__search .search__btn{
+  width: 100px;
+  height: 45px;
+  background-color: #ffffff;
+  border: 1px solid #C5C6C9;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 900;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+}

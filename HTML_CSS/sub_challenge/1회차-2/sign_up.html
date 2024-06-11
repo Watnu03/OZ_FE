@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    ol{
+      list-style: none;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-items: start;
+    }
+  </style>
+  <title>Sign up</title>
+</head>
+<body>
+  <div class="container">
+    <h1>오즈코딩스쿨 회원가입</h1>
+    <fieldset class="input">
+      <legend>입력 사항</legend>
+      <form action="none.com">
+        <ol>
+          <li>이메일: <input type="email" placeholder="이메일을 입력해주세요." name="email"></li>
+          <li>이름: <input type="text" placeholder="이름을 입력해주세요." name="name"></li>
+          <li>비밀번호: <input type="password" placeholder="패스워드를 입력해주세요" name="password"></li>
+          <li>
+            <div class="phone">휴드폰 번호: 
+            <input type="number" name="phone-01">-
+            <input type="number" name="phone-02">-
+            <input type="number" name="phone-03">
+            <div><strong>00000</strong></div>
+            <input type="button" value="인증번호 전송" name="phone-btn">
+            <div><strong>3:00</strong></div>
+            <input type="button" value="인증확인" name="phone-check-btn">
+          </div>
+          </li>
+          <li>
+            <select name="location" id="location">
+              <option value="location" selected disabled >지역을 선택해주세요</option>
+              <option value="seoul">서울</option>
+              <option value="busan">부산</option>
+              <option value="daegu">대구</option>
+            </select>
+          </li>
+          <li>
+            <div class="sex">성별: 
+              <input type="radio" value="woman">여성
+              <input type="radio" value="man">남성
+            </div>
+          </li>
+          <li><input type="submit" value="가입하기"></li>
+        </ol>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>취미</legend>
+      <ol>
+        <li class="hobby">
+          <input type="checkbox" value="coding">코딩
+          <input type="checkbox" value="exercise">운동
+          <input type="checkbox" value="sleep">잠자기
+          <input type="checkbox" value="travel">여행
+          <input type="checkbox" value="read">독서
+          <input type="checkbox" value="move">영화보기
+        </li>
+        <li class="sex">
+          <input type="radio" value="woman">여성
+          <input type="radio" value="man">남성
+          <input type="radio" value="secret">비밀
+        </li>
+      </ol>
+    </fieldset>
+  </div>
+</body>
+</html>

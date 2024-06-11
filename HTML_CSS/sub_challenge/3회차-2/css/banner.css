@@ -1,0 +1,102 @@
+header{
+  width: 100%;
+  height: 50px;
+  padding-bottom: 10px;
+
+  background-color: #141517;
+
+  position: fixed;
+  z-index: 1;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header 첫번째 브랜드 로고 */
+.brand-info{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.brand-list-bar{
+  width: 30px;
+  height: 50px;
+  margin-right: -25px;
+
+  font-size: 25px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-logo{
+  width: 180px;
+  height: 50x;
+
+  position: relative;
+}
+.brand-logo > img{
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+/* x축과 y축으로 지정한 값만큼 이동 */
+  transform: translate(-50%, -50%);
+}
+
+
+/* header 두번째 서칭바 */
+.search-bar{
+  position: relative;
+}
+.search-bar input{
+  width: 400px;
+  height: 35px;
+  padding: 2.5px 10px;
+
+  font-size: 15px;
+  border-radius: 30px;
+  border: solid 1px #313133;
+  background-color: #141517;
+  color: #DFE2EA;
+}
+.search-bar i{
+  font-size: 20px;
+
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+
+/* header 세번째 기타 아이콘 */
+.header-icon{
+  width: 200px;
+  height: 40px;
+
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-icon i{
+  font-size: 20px;
+  margin-right: 20px;
+}
+.header-login-btn{
+  width: 70px;
+  height: 30px;
+  margin-right: 20px;
+  
+  border-radius: 10px;
+  border: solid 1px #313133;
+  background-color: #141517;
+  color: #DFE2EA;
+
+  font-size: 13px;
+  text-align: center;
+  line-height: 30px;
+}

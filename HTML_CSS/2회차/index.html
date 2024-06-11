@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설문조사</title>
+</head>
+  <body>
+    <h1>설문조사</h1>
+    <div id="intro">
+      <p>안녕하십니까? </p>
+      <p>본 조사는 HTML: Form과 Input의 개념을 이해하기위한 설문조사입니다.<br>아래의 모든 항목에 답변해주시기 바랍니다. 감사합니다.</p>
+      <p><mark>응답기간:2024.03.22(금)~2024.03.27(수)</mark></p>
+      <br>
+    </div>  
+
+    <!--action 데이터보내는곳 // method: post와get 사용 -->
+    <form action="none.com" method="post">
+      <fieldset id="header">
+        <legend>개인정보</legend>
+        <h4>귀하의 이름은 무엇입니까</h4>
+        <label for="name"></label>
+        <input id="name" type="name">
+        <h4>귀하의 이메일을 입력 부탁드립니다.</h4>
+        <label for="email"></label>
+        <input id="email" type="email">
+        <h4>귀하의 나이가 어떻게 되시나요?</h4>
+        <!--type:radio는 중복체크안되게 함-->
+        <input id="ten" name="age" type="radio">
+        <label for="ten">10대</label>
+        <input id="twenty" name="age" type="radio">
+        <label for="twenty">20대</label>
+        <input id="thirty" name="age" type="radio">
+        <label for="thirty">30대</label>
+        <input id="forty" name="age" type="radio">
+        <label for="forty">40대</label>
+        <input id="fifty" name="age" type="radio">
+        <label for="fifty">50대</label>
+        <br>
+      </fieldset>
+
+      <fieldset class="main">
+        <legend>설문</legend>
+        <h4>공부를 할때 참고하는 사이트는 어디입니까? (*중복체크 가능합니다.)</h4>
+        <input id="google" type="checkbox" name="study">
+        <label for="google">Google</label>
+        <input id="naver" type="checkbox" name="study">
+        <label for="naver">Naver</label>
+        <input id="yahoo" type="checkbox" name="study">
+        <label for="yahoo">Yahoo</label>
+        <input id="kakao" type="checkbox" name="study">
+        <label for="kakao">Kakao</label>
+        <h4>부트캠프를 선택할때 가장 중요하게 생각한것은 무엇입니까? </h4>
+        <input id="location" name="choice" type="radio">
+        <label for="location">위치</label>
+        <input id="time" name="choice" type="radio">
+        <label for="time">시간</label>
+        <input id="teacher" name="choice" type="radio">
+        <label for="teacher">강사</label>
+        <input id="class" name="choice" type="radio">
+        <label for="class">수업</label>
+        <input id="price" name="choice" type="radio">
+        <label for="price">가격</label>
+        <br>
+      </fieldset>
+
+      <fieldset id="main-etc">
+        <legend>기타</legend>
+        <textarea rows="5" cols="60"></textarea>
+        <br>
+      </fieldset>
+
+      <footer>
+        <h4>마지막까지 수고 많으셨습니다. 감사합니다.</h4>
+        <label for="submit"></label>
+        <input id="submit" name="submit" type="submit" value="제출">
+        <br>
+      </footer>
+
+    </form>
+  </body>
+</html>

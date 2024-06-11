@@ -1,0 +1,57 @@
+html, body{
+  height: 100%;
+}
+body{
+  margin: 50px;
+}
+fieldset{
+  border-radius: 15px;
+  border-style: double;
+  border-width: 5px;
+  border-color: tomato;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.td-daiary{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between
+}
+.td-info{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.td-status > div,input{
+  display: inline-block;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Character{
+  color: blue;
+  font-weight: 900;
+}
+#criminal{
+  color: rgb(128, 125, 125);
+  font-weight: 900;
+}
+.dialogue{
+  color: rgb(255, 55, 88);
+  font-weight: 900;
+  font-size: 20px;
+}
+.dialogue:nth-child(5){
+  color: rgb(182, 197, 47);
+  font-size: 25px;
+}

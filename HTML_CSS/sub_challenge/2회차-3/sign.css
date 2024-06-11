@@ -1,0 +1,130 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
+body{
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  height: 50px;
+  margin: 0px;
+  background-color: #000000;
+  border-radius: 15px 15px 0px 0px;
+
+  text-align: center;
+  line-height: 60px;
+}
+.logo > img{
+  width: 100px;
+  height: auto;
+}
+.container{
+  width: 360px;
+  height: 740px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 5px #00E09A ,3px 3px 1px 10px #0A7E58, 5px 5px 1px 15px #141517;
+  position: relative;
+}
+.form-input{
+  width: 320px;
+  height: 660px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 30px;
+  border: solid 0.05em #dfe4ea;
+
+  position: absolute;
+  left: 9px;
+  bottom: 14px;
+}
+
+input[type=text], input[type=email], input[type=date], input[type=password] {
+  width: 310px;
+  height: 35px;
+  border: solid 0.05em #dfe4ea;
+  border-radius: 5px;
+}
+/* 핸드폰 input box */
+select, .tel-info > input[type=text]{
+  width: 100px;
+  height: 35px;
+  border: solid 0.05em #dfe4ea;
+  border-radius: 5px;
+}
+.tel-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tel-info{
+  display: flex;
+}
+.input-name{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.input-email{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.input-birth{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.input-sex{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+.input-tel{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.input-password{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+input, select{
+  margin-bottom: 3px;
+}
+input[type=button]{
+  width: 80px;
+  height: 35px;
+  font-weight: 900;
+  border: none 0.05em #dfe4ea;
+  border-radius: 5px;
+}
+
+ul{
+  list-style-type:none;
+}
+.sex-list{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px -5px -45px;
+}
+
+.form-submit{
+ margin-top: 5px; 
+}
+.form-submit > input{
+  width: 320px;
+  height: 40px;
+  font-weight: 900;
+  border: none 0.05em #dfe4ea;
+  border-radius: 5px;
+  background-color: #0040FF;
+  color: #FFFFFF;
+}

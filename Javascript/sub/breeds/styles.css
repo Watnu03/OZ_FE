@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 20px;
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+#container{
+  width: 100%;
+  max-width: 800px;
+  padding-top: 30px;
+  text-align: center;
+}
+h1{
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  
+}
+header{
+  width: 100%;
+  max-width: 800px;
+  height: 80px;
+
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#header > span {
+  display: flex;
+  align-items: center;
+}
+input{
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+}
+#filter-btn, #reset-btn{
+  width: 100px;
+  height: 40px;
+  margin: 0 5px;
+  background-color: #5B63FB;
+  color: #ffffff;
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+select{
+    height: 40px;
+}
+img{
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+#main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.foot-btn{
+  background-color: tomato;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#more-btn, #top-btn{
+  width: 60px;
+  height: 60px;
+
+  background-color: #5B63FB;
+  color: #ffffff;
+  font-weight: 900;
+
+  border-radius: 50%;
+  border: none;
+  box-shadow: 3px 3px 10px gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  cursor: pointer;
+}
+#more-btn{
+  left: 300px;
+  bottom: 100px;
+}
+#top-btn{
+  right: 300px;
+  bottom: 100px;
+}
+
+/* button 으로하니 작동 안됨
+=> active는 직접 컨트롤러로 누를때~땔때 이 사이의 순간에만 작동함/ onclick은 그 사이의 순간에 존재하지 않기 때문에 작동하지 않음.*/
+#top-btn:active, #more-btn:active, #filter-btn:active, #reset-btn:active{
+  background-color: #898ffd;
+}
+
+input:focus{
+  border: solid 2px #5B63FB;
+  outline: none;
+}

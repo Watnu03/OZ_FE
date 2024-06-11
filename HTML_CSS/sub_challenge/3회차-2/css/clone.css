@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+/* reset.css */
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #141517;
+  /* color: #DFE2EA; */
+  color: rgb(169, 169, 175);
+  padding-left: 20px;
+  padding-right: 50px;
+
+  font-family: "Black Han Sans", sans-serif;
+  font-style: normal;
+
+  position: relative;
+}
+.game-nm, .ch-cnt, .bar-title{
+  font-family: "Sunflower", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.content{
+  width: 100%;
+  margin-left: 200px;
+
+  position: absolute;
+  top: 60px;
+}
+.banner{
+  height: 100px;
+  padding-left: 0px;
+  background-color: #1E2022;
+  border-radius: 15px;
+
+  display: flex;
+}
+
+.header-banner{
+  border-right: solid 1px #a9a9af;
+
+  display: flex;
+  align-items: center;
+}
+.header-banner-text{
+  height: 100px;
+  width: 250px;
+  padding: 5px 20px 5px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-banner-text :nth-child(1){
+  font-size: 17px;
+  color: #DFE2EA;
+}
+.header-banner-text :nth-child(2){
+  font-size: 13px;
+
+  font-family: "Sunflower", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.header-banner-text :nth-child(3){
+  font-size: 13px;
+  margin-top: 10px;
+
+  color: #00F8A1;
+  font-family: "Sunflower", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.header-banner-img{
+  height: 100px;
+  width: 130px;
+
+  position: relative;
+}
+.header-banner-img img{
+  position: absolute;
+  width: 100%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* LIVE 아이콘 */
+.live-btn{
+  width: 50px;
+  height: 25px;
+  margin-right: 10px;
+
+  border-radius: 5px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+
+  position: relative;
+}
+.live-btn div{
+  position: absolute;
+  top: 15%;
+  left: 13%;
+}
+
+/* 메인 비디오 */
+.main-video-play{
+  height: 400px;
+  width: 100%;
+  text-align: center;
+}
+.main-video-play iframe{
+  height: 400px;
+  width: 100%;
+
+  object-fit:cover;
+}
+
+.live-header__info{
+  display: flex;
+}
+.live-header__info > .ch-cnt{
+  color: #C8322F;
+  font-weight: 900;
+}
+.live-video > .ch-title{
+  margin: 10px 0 20px 0;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.main-video{
+  position: relative;
+}
+.main-video__info{
+  height: calc(100% - 40px);
+  width: 25%;
+  padding: 20px 0 20px 20px;
+
+  background-color: rgba(30, 32, 34, 0.902);
+  overflow-y: hidden;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-video__info > .live-profile-info{
+  height: 80px;
+
+  position: relative;
+}
+
+.live-profile-info > .ch-profile{
+  width: 60px;
+  height: 60px;
+}
+.live-profile-info > .ch-info{
+  width: auto;
+  margin-left: 10px;
+}
+.live-profile-info > .ch-info :nth-child(1){
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.live-profile-info > .ch-info :nth-child(2){
+  font-size: 18px;
+  color: #00F8A1;
+}
+.live-profile-info{
+  display: flex;
+  align-items: center;
+  
+}
+
+/* 치지직 파트너 스트리머를 소개합니다 */
+.partner-intro{
+  margin-bottom: 50px;
+}
+.partner-intro__title{
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.partner-intro__title :nth-child(1){
+  color: #FFFFFF;
+  font-size: 23px; 
+}
+.partner-intro__title :nth-child(2){
+  margin-right: 230px;
+}
+
+.partner-streamer{
+  padding-left: 0;
+
+  display: flex;
+  justify-content: start;
+}
+.partner-streamer > li{
+  margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+.partner-streamer .ch-profile{
+  width: 100px;
+  height: 100px;
+}
+.partner-streamer .live-btn{
+  width: 35px;
+  height: 20px;
+  font-size: 10px;
+
+  text-align: center;
+  line-height: 15px;
+
+  position: absolute;
+  top: 90px;
+  left: 35px;
+}
+.partner-streamer .streamer__nm{
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* 추천 채널 */
+.recomand-ch___title{
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recomand-ch___title :nth-child(1){
+  color: #FFFFFF;
+  font-size: 23px; 
+}
+.recomand-ch___title :nth-child(2){
+  margin-right: 230px;
+}
+
+.recomand-ch__list{
+  width: 100%;
+  padding-left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.recomand-ch__list li{
+  width: 330px;
+  height: 280px;
+  margin: 0 20px 20px 0;
+}
+
+.ch-thumbnail{
+  width: 330px;
+  height: 200px;
+
+  border: solid 0.1em #313133;
+  border-radius: 15px;
+
+  position: relative;
+  overflow: hidden;
+}
+.ch-thumbnail > img{
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+/* x축과 y축으로 지정한 값만큼 이동 */
+  transform: translate(-50%, -50%);
+
+  object-fit: cover;
+}
+.recomand-ch__list .ch-info{
+  width: 320px;
+
+  display: flex;
+  align-items: center;
+}
+.ch-info .ch-owner__info{
+  width: 200px;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.ch-info .ch-owner__info :nth-child(1){
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.ch-owner__info .game-nm{
+  width: auto;
+  height: 15px;
+
+  padding: 5px;
+}

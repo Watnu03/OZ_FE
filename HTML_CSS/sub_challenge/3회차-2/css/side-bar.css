@@ -1,0 +1,177 @@
+ul,ol{
+  list-style-type: none;
+}
+
+aside{
+  margin-top: 50px;
+  overflow-y: scroll;
+  position: fixed;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.side-bar{
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.bar-first > .fir, .sec, .thi{
+  width: 180px;
+  height: 50px;
+
+  margin-bottom: -18px;
+
+  font-size: 15px;
+  
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.icon{
+  width: calc(100% - 160px);
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  height: 100%;
+  margin-left: 10px;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+/* 줄 나눔 줄 */
+.wrap{
+  width: 180px;
+  border: solid 0.1em #313133;
+
+  margin: 20px 0px 20px 0px;
+}
+
+.bar-sceond{
+  margin-bottom: 20px;
+}
+.bar-title{
+  width: 180px;
+
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bar-sceond-btn > i{
+  margin-left: 5px;
+}
+.recommended-ch{
+  width: 180px;
+  padding-left: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+.re-ch-info{
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.ch-profile{
+  width: 30px;
+  height: 30px;
+
+  background-color: #DFE2EA;
+  border: solid 2px #00F8A1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #141517;
+
+  position: relative;
+}
+.ch-profile > img{
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+/* x축과 y축으로 지정한 값만큼 이동 */
+  transform: translate(-50%, -50%);
+}
+.ch-info{
+  width: 100px;
+  margin-left: 5px;
+}
+.ch-info .game-nm{
+  font-size: 13px;
+  color: #86868b;
+  margin-left: 3px;
+}
+.re-ch-info > .ch-cnt{
+  flex-grow: 1;
+  color: #C8322F;
+  font-size: 12px;
+
+  text-align: end;
+}
+.re-ch-info{
+  display: flex;
+  align-items: center;
+}
+.bar-sceond .more{
+  width: 80px;
+  height: 30px;
+
+  border: solid 0.1em #313133;
+  border-radius: 15px;
+
+  font-size: 12px;
+  color: #86868b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 70px;
+}
+
+/*  */
+.bar-third .bar-title{
+  font-size: 13px;
+  display: flex;
+  justify-content: start;
+}
+.bar-third .bar-title div{
+  margin-right: 5px;
+}
+.last-menu{
+  padding-left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.last-menu > .Shortcut{
+  font-size: 17px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.Shortcut{
+  margin-bottom: 15px;
+}
+.Shortcut i{
+  width: 20px;
+  text-align: center;
+  padding-right: 10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sign.css">
+  <title>회원가입</title>
+</head>
+<body>
+  <div class="container">
+    <header class="logo">
+      <img src="images/ozcoding_logo.png" alt="logo">
+    </header>
+
+    <div class="form-input">
+      <h4 class="form-title">회원가입</h4>
+      
+      <div class="input-name">
+        <label for="name">이름<b style="color: red;">*</b></label>
+        <input type="text" id="name" name="이름" placeholder="이름을 입력해주세요" maxlength="20">
+      </div>
+
+      <div class="input-email">
+        <label for="email">이메일
+          <span style="color: blue; font-size: 11px;">*로그인 시 아이디로 사용합니다.</span>
+        </label>
+        <input type="email" id="email" name="이메일" placeholder="이메일 (ex@ozcoding.com)">
+      </div>
+
+      <div class="input-birth">
+        <label for="birth">생년월일<b style="color: red;">*</b></label>
+        <input type="date" id="birth" name="생일" >
+      </div>
+
+      <div class="input-sex">
+        <div>성별<b style="color: red;">*</b></div>
+        <ul class="sex-list">
+          <li class="sex-woman">
+            <input type="radio" id="woman" name="sex" >
+            <label for="woman">여자</label>
+          </li>
+          <li class="sex-man">
+            <input type="radio" id="man" name="sex" >
+            <label for="man">남자</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="input-tel">
+        <div class="tel-nav">
+          <div class="tel-text">휴대전화<b style="color: red;">*</b></div>
+          <input type="button" value="인증하기">
+        </div>
+        <div class="tel-info">
+          <select id="tel-fir">
+            <option value="010" selected>010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+          </select>
+          <span class="tel-text">-</span>
+          <input type="text" minlength="4" maxlength="4">
+          <span class="tel-text">-</span>
+          <input type="text" minlength="4" maxlength="4">
+        </div>
+      </div>
+
+      <div class="input-password">
+        <label for="password">비밀번호
+          <span style="color: #0040FF; font-size: 11px;">*6~15자의 영문 대/소문자,숫자,기호 조합</span>
+        </label>
+        <input type="password" id="password" name="비밀번호" placeholder="비밀번호를 입력해주세요" minlength="6" maxlength="15">
+      </div>
+      
+      <div class="input-check">
+        <div class="checkbox">
+          <input type="checkbox" class="input-checkbox" id="chek-age">
+          <label for="chek-age">만 14세 이상입니다. (필수)</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" class="input-checkbox" id="check-service">
+          <label for="check-service">서비스 이용약관동의 (필수)</label>
+          <span><u>내용보기</u></span>
+        </div>
+      </div>
+
+      <div class="form-submit">
+        <input type="button" value="가입하기">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>카운트다운</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- 눈내리는 효과 -->
+    <div class="snow">
+      <canvas id="canv"></canvas>
+    </div>
+
+    <div class="container">
+      <h1>Until Christmas</h1>
+      <div class="clock">
+        <div class="clock-now">
+          <p class="clock-text">Current time</p>
+          <p id="now-time"></p>
+        </div>
+
+        <div class="clock-xmas">
+          <p  class="clock-text">Christmas</p>
+          <p id="xmas-time"></p>
+        </div>
+
+        <div class="clock-dday">
+          <p class="clock-text">🎄Christmas D-Day🎄</p>
+          <p id="day-cnt"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="snow.js"></script>
+  </body>
+</html>

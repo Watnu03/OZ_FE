@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    /* 정보 */
+    .info{
+      margin-top: 20px;
+      text-align: center;
+    }
+    .info > span{
+      font-size: 20px;
+      font-weight: 800;
+      margin: 5px;
+      padding: 15px;
+
+      border: solid 5px blue;
+      border-radius: 30px;
+
+      text-align: center;
+      line-height: 50px;
+    }
+    /* 로그 */
+    .game-log{
+      width: 800px;
+      margin-top: 50px;
+    }
+    .game-log > p{
+      max-width: 300px;
+      
+    }
+    .player-log{
+      height: 50px;
+      margin-bottom: 5px;
+      padding: 0 20px 0 20px;
+      border-radius: 10px;
+
+      background-color: rgb(105, 140, 255);
+      line-height: 50px;
+      text-align: right;
+
+      position: relative;
+      left: 460px;
+      
+    }
+    .monster-log{
+      height: 50px;
+      margin-bottom: 5px;
+      padding: 0 20px 0 20px;
+      border-radius: 10px;
+
+      background-color: rgb(255, 133, 111);
+      line-height: 50px;
+      text-align: left;
+    }
+  </style>
+
+  <title>몬스터 잡기</title>
+</head>
+<body>
+  
+  <div id="container">
+    <h1>몬스터잡기게임⚔</h1>
+    <div class="info">
+      <span id="player-info"></span>
+      <span id="monster-info"></span>
+    </div>
+    <div class="game-log"></div>
+  </div>
+
+  <script>
+    //플레이어 정보    
+    const player={
+      hp: 100,
+      attackDamage: Number(prompt('1회 공격시 데미지는 얼마 인가요?(양의 정수로 입력하세요)')), //사용자 데미지
+      aim: Math.floor(Math.random()*(100-70)+70), //사용자 명중률
+    }
+    //몬스터 정보
+    const monster={
+      hp: 100,
+      attackDamage: Math.floor(Math.random()*(20-10)+10), //몬스터 공격 데미지
+      aim: Math.floor(Math.random()*(60-50)+50), //몬스터 명중률
+    }
+    //플레이어와 몬스터 정보 출력하기
+    const info = document.querySelector('.info');
+    info.querySelector('#player-info').innerHTML = 
+    `[Player]
+    HP: ${player.hp}
+    AttackDamage: ${player.attackDamage}
+    Aim: ${player.aim}
+    `;
+    document.querySelector('#monster-info').innerHTML = 
+    `[Monster]
+    HP: ${monster.hp}
+    AttackDamage: ${monster.attackDamage}
+    Aim: ${monster.aim}
+    `;
+
+    //게임 시작 문구
+    const container = document.querySelector('#container');
+    const start = document.createElement('h2');
+    start.textContent = "몬스터 잡기 게임을 시작합니다!";
+    container.insertBefore(start,info); //특정 위치에 노드삽입
+
+
+    const gameLog = document.querySelector('.game-log');
+    let attackCnt = 0;
+
+    if(player.attackDamage > 0){
+      while(monster.hp > 0 && player.hp > 0){
+        ++attackCnt;
+        
+        //플레이어의 턴
+        if(Math.random() * 100 < player.aim){ //100중에 aim이 크다면 적중
+          monster.hp -= player.attackDamage;
+          if(monster.hp < 0){
+            monster.hp = 0;
+          }
+          const playerLog01 = document.createElement('p');
+          const playerLog02 = document.createElement('p');
+          playerLog01.className = 'player-log';
+          playerLog02.className = 'player-log';
+
+          playerLog01.textContent = `플레이어의 ${attackCnt}번째 공격이 성공했습니다.`;
+          playerLog02.textContent = `몬스터의 남은 HP는 ${monster.hp}입니다.`
+          gameLog.appendChild(playerLog01);
+          gameLog.appendChild(playerLog02);
+
+          //몬스터 HP 0일때 다음 몬스터턴으로 안넘어가게 나가기
+          if(monster.hp === 0){
+            break;
+          }
+        }
+        else{
+          const playerLog03 = document.createElement('p');
+          playerLog03.className = 'player-log';
+          playerLog03.textContent = `플레이어의 ${attackCnt}번째 공격이 빗나갔습니다`;
+          gameLog.appendChild(playerLog03);
+
+          // console.log(`플레이어의 ${attackCnt}번째 공격이 빗나갔습니다`);
+        }
+
+        //몬스터의 턴
+        if((Math.random() * 100 < monster.aim)){ //100중에 aim이 크다면 적중
+          player.hp -= monster.attackDamage;
+          if(player.hp <0){
+            player.hp =0;
+          }
+          const monsterLog01 = document.createElement('p');
+          const monsterLog02 = document.createElement('p');
+          monsterLog01.className = 'monster-log';
+          monsterLog02.className = 'monster-log';
+          
+          monsterLog01.textContent = `몬스터의 ${attackCnt}번째 공격이 성공했습니다.`;
+          monsterLog02.textContent = `플레이어의 남은 HP는 ${player.hp}입니다.`
+          gameLog.appendChild(monsterLog01);
+          gameLog.appendChild(monsterLog02);
+          
+          // console.log(`몬스터의 ${attackCnt}번째 공격이 성공했습니다.`);
+          // console.log(`플레이어의 남은 HP는 ${player.hp}입니다.`);
+        }
+        else{
+          const monsterLog03 = document.createElement('p');
+          monsterLog03.className = 'monster-log';
+          monsterLog03.textContent = `몬스터의 ${attackCnt}번째 공격이 빗나갔습니다`;
+          gameLog.appendChild(monsterLog03);
+
+          // console.log(`몬스터의 ${attackCnt}번째 공격이 빗나갔습니다`);
+        }
+
+
+      }
+
+    //게임 종료 문구
+    let endText = player.hp > 0 ? '플레이어의 승리입니다!':'플레이어가 사망했습니다!'
+    const end = document.createElement('h2');
+    end.textContent = endText;
+    container.appendChild(end); //맨마지막에 노드삽입
+
+    // console.log(player.hp > 0 ? '플레이어의 승리입니다!':'플레이어가 사망했습니다!');
+    }
+    else{
+      alert('공격 데미지를 양의 정수로 입력하지 않았습니다. 게임을 종료합니다.');
+
+      history.go(0); //0이면 새로고침/ -1을 넣으면 이전페이지로
+    }
+  </script>
+</body>
+</html>
